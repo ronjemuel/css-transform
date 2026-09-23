@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f7f3ea;
+    color: #222;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 18px 20px;
+    background-color: beige;
+    border-bottom: 2px solid #d2c7ad;
+}
+
+.navbar h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.content {
+    min-height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.content h1 {
+    margin-bottom: 8px;
+}
+
+.content p {
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: #555;
+}
+
+.preview {
+    width: min(750px, 95%);
+    min-height: 320px;
+    border: 3px dashed #555;
+    border-radius: 12px;
+    padding: 35px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+    background-color: white;
+}
+
+.example {
+    width: 220px;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.example h3 {
+    margin: 0 0 45px;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: coral;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.transformed {
+    transition: transform 0.3s ease;
+}
+
+.transformed:hover {
+    transform: translate(70px, 20px);
+}
+
+.page-links {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.page-links a {
+    text-decoration: none;
+    color: white;
+    background-color: #333;
+    padding: 11px 20px;
+    border-radius: 7px;
+    transition: 0.2s;
+}
+
+.page-links a:hover {
+    transform: translateY(-3px);
+    background-color: #555;
+}
+
+.page-links a:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        gap: 25px;
+    }
+
+    .navbar h2 {
+        font-size: 16px;
+    }
+
+    .preview {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .example {
+        min-height: 180px;
+    }
+
+    .example h3 {
+        margin-bottom: 25px;
+    }
+}
